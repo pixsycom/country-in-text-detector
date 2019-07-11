@@ -39,19 +39,19 @@ function detect(str) {
 		}
 	}
 
-	for(var i = 0; i < CITIES.length; i++){
-		var matches = clean.match(CITIES[i].string_match);
-		if(!(typeof matches === "undefined" || matches === null)) {
-			matches = matches.map(function(m){return m.substring(1);});
-			result.push({
-				iso3166: CITIES[i]["country_iso_3166-1_alpha-2"],
-				name: CITIES[i].city_name,
-				countryName: CITIES[i].country_name,
-				type: "city",
-				matches: matches
-			});
-		}
-	}
+// 	for(var i = 0; i < CITIES.length; i++){
+// 		var matches = clean.match(CITIES[i].string_match);
+// 		if(!(typeof matches === "undefined" || matches === null)) {
+// 			matches = matches.map(function(m){return m.substring(1);});
+// 			result.push({
+// 				iso3166: CITIES[i]["country_iso_3166-1_alpha-2"],
+// 				name: CITIES[i].city_name,
+// 				countryName: CITIES[i].country_name,
+// 				type: "city",
+// 				matches: matches
+// 			});
+// 		}
+// 	}
 
 	// fallback for prefixes / postfixes
 	// if two results A and B have same name and same type
